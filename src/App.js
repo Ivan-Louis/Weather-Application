@@ -5,9 +5,6 @@ import Form from "./components/form";
 import Weather from "./components/weather";
 import KEY from "./api_key";
 
-// const STAV_ID = "6453391";
-// const MOSC_ID = "524901";
-// const API_CALL = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=";
 const API_KEY = KEY;
 
 class App extends React.Component{
@@ -39,7 +36,7 @@ class App extends React.Component{
     }
     const data = await api_call.json();
     // console.log(data);
-    if (city !== "City..."){
+    if (city !== "City..." && data.main !== undefined){
       this.setState({
         temperature: data.main.temp - 273.15,
         city: data.name,
