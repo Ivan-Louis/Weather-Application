@@ -3,11 +3,12 @@ import React from "react";
 import Titles from "./components/titles";
 import Form from "./components/form";
 import Weather from "./components/weather";
+import KEY from "./api_key";
 
 // const STAV_ID = "6453391";
 // const MOSC_ID = "524901";
 // const API_CALL = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=";
-const API_KEY = "0466470ab15916b2fedeb67ab987d594";
+const API_KEY = KEY;
 
 class App extends React.Component{
   state = {
